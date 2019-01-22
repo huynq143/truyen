@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbg"
+    tools:context="com.example.peter.mob403_asm.MoTaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/civHinhTruyen"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="32dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:elevation="10dp"/>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        app:cardCornerRadius="15dp">
+
+                        <ImageButton
+                            android:id="@+id/img_btn_back"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/ic_back_arrow"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="8dp" />
+
+                        <ImageView
+                            android:alpha="0.1"
+                            android:id="@+id/img_hinhsp_chitiet"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+
+                            android:scaleType="fitXY" />
+                    </android.support.v7.widget.CardView>
+
+            </android.support.constraint.ConstraintLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tvTenTruyen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#ffffff"
+                        android:textAlignment="center"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvTen_tac_gia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tên tác giả :"
+                        android:textSize="@dimen/sizeChu"
+                        android:textColor="@color/colortitle"
+                        android:layout_marginLeft="@dimen/marginLeft"/>
+                    <TextView
+                        android:id="@+id/tvTen_tacgia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/sizeChu"
+                        android:textColor="@color/colortitle"
+                        android:layout_marginLeft="@dimen/marginLeft"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvThe_loai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thể loại :"
+                        android:textSize="@dimen/sizeChu"
+                        android:layout_marginLeft="@dimen/marginLeft"
+                        android:textColor="@color/colortitle"/>
+                    <TextView
+                        android:id="@+id/tvTheloai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/sizeChu"
+                        android:layout_marginLeft="@dimen/marginLeft"
+                        android:textColor="@color/colortitle"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvTrang_thai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trạng thái :"
+                        android:textSize="@dimen/sizeChu"
+                        android:textColor="@color/colortitle"
+                        android:layout_marginLeft="@dimen/marginLeft"/>
+                    <TextView
+                        android:id="@+id/tvTrangthai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/sizeChu"
+                        android:textColor="@color/colortitle"
+                        android:layout_marginLeft="@dimen/marginLeft"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvSo_chuong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Số chương :"
+                        android:textSize="@dimen/sizeChu"
+                        android:textColor="@color/colortitle"
+                        android:layout_marginLeft="@dimen/marginLeft"/>
+                    <TextView
+                        android:id="@+id/tvSochuong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/sizeChu"
+                        android:textColor="@color/colortitle"
+                        android:layout_marginLeft="@dimen/marginLeft"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvNgay_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ngày Upload :"
+                        android:textSize="@dimen/sizeChu"
+                        android:textColor="@color/colortitle"
+                        android:layout_marginLeft="@dimen/marginLeft"/>
+                    <TextView
+                        android:id="@+id/tvNgayup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/sizeChu"
+                        android:textColor="@color/colortitle"
+                        android:layout_marginLeft="@dimen/marginLeft"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvNgay_cap_nhat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ngày cập nhật :"
+                        android:textSize="@dimen/sizeChu"
+                        android:textColor="@color/colortitle"
+                        android:layout_marginLeft="@dimen/marginLeft"/>
+                    <TextView
+                        android:id="@+id/tvTNgaycapnhat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/sizeChu"
+                        android:textColor="@color/colortitle"
+                        android:layout_marginLeft="@dimen/marginLeft"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvNoi_dung"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nội dung :"
+                        android:textSize="@dimen/sizeChu"
+                        android:textColor="#ffffff"
+                        android:layout_marginLeft="@dimen/marginLeft"/>
+                    <TextView
+                        android:id="@+id/tvTNoidung"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/sizeChu"
+                        android:textColor="#ffffff"
+                        android:layout_marginLeft="@dimen/marginLeft"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnDoc_truyen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Đọc Truyện"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:padding="5dp"
+                    android:layout_margin="@dimen/marginLeft"
+                    android:background="@drawable/btndoctruyen"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</LinearLayout>

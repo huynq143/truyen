@@ -1,0 +1,137 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorbg"
+    android:orientation="vertical"
+    tools:context="com.example.peter.mob403_asm.HomeFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorbgtoolbar">
+
+        <TextView
+            android:id="@+id/truyenfull"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Thư viện"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/tvSo_trang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#ffffff"
+            android:text=""
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/truyenfull"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/tvTongSoTrang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:text=""
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvSo_trang" />
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="170sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            android:hint="Nhập tên truyện"
+            android:visibility="gone"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_search"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_search_trang"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_refresh"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"
+            android:background="@drawable/ic_refresh_trang"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:background="#1e4251"
+        android:id="@+id/llHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--add view1o_giohang vào list view nhé-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rc_trangchu"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="97"/>
+
+        <!--<com.victor.loading.rotate.RotateLoading-->
+            <!--android:background="#0000ff11"-->
+            <!--android:id="@+id/rotateLoading"-->
+            <!--android:layout_width="25dp"-->
+            <!--android:layout_height="0dp"-->
+            <!--app:loading_width="3dp"-->
+            <!--app:loading_color="#ffffff"-->
+            <!--android:visibility="gone"-->
+            <!--android:textAlignment="center"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_weight="3"-->
+            <!--/>-->
+
+
+    </LinearLayout>
+
+</LinearLayout>
